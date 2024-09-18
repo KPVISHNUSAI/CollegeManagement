@@ -1,0 +1,63 @@
+# Test login
+POST http://localhost:8081/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "vishnu",
+  "password": "vishnu"
+}
+
+###
+
+POST http://localhost:8081/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "password123",
+  "name": "New User",
+  "email": "newuser@example.com",
+  "phone": "123-456-7890",
+  "role": "STUDENT"
+}
+
+
+# # Test creating a department
+# POST http://localhost:8080/api/v1/admin/departments
+# Authorization: Bearer {{access_token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Computer Science",
+#   "description": "Department of Computer Science"
+# }
+
+# ###
+
+# # Test getting all departments
+# GET http://localhost:8080/api/v1/admin/departments
+# Authorization: Bearer {{access_token}}
+
+# ###
+
+# # Test enrolling a student in a course
+# POST http://localhost:8080/api/v1/students/{studentId}/courses/{courseId}/enroll
+# Authorization: Bearer {{access_token}}
+
+# ###
+
+# # Test getting enrollments for a student
+# GET http://localhost:8080/api/v1/students/{studentId}/enrollments
+# Authorization: Bearer {{access_token}}
+
+# ###
+
+# # Test getting enrollments for a course
+# GET http://localhost:8080/api/v1/courses/{courseId}/enrollments
+# Authorization: Bearer {{access_token}}
+
+# ###
+
+# # Test deleting an enrollment
+# DELETE http://localhost:8080/api/v1/students/{studentId}/courses/{courseId}/enroll
+# Authorization: Bearer {{access_token}}
